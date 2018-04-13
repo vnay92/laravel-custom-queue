@@ -19,5 +19,5 @@
             "Vnay92\\CustomQueue\\": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
