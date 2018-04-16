@@ -203,25 +203,4 @@ class CustomQueueServiceProvider extends ServiceProvider
             return new NullFailedJobProvider;
         });
     }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return [
-            'custom.queue',
-            'queue.custom.worker',
-            'queue.custom.listener',
-            'queue.custom.failer',
-            'command.custom.queue.work',
-            'command.custom.queue.listen',
-            'command.custom.queue.restart',
-            'command.custom.queue.subscribe',
-            'custom.queue.connection',
-        ];
-    }
-
 }

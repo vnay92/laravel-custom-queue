@@ -7,15 +7,16 @@
         "php-amqplib/php-amqplib": "^2.6"
     },
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Vinay Bharadwaj",
-            "email": "vnay92@gmail.com"
-        }
-    ],
+    "authors": [{
+        "name": "Vinay Bharadwaj",
+        "email": "vnay92@gmail.com"
+    }],
     "autoload": {
         "psr-4": {
             "Vnay92\\CustomQueue\\": "src/"
+        },
+        "psr-0": {
+            "Sentry\\SentryLaravel\\": "src/"
         }
     },
     "minimum-stability": "dev"
