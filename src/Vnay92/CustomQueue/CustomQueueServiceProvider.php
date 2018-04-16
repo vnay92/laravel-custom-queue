@@ -32,10 +32,23 @@ use Vnay92\CustomQueue\Connectors\RabbitMQConnector;
 use Vnay92\CustomQueue\Failed\NullFailedJobProvider;
 
 /**
- * @see https://github.com/laravel/framework/blob/5.6/src/Illuminate/Queue/QueueServiceProvider.php
+ * @see https://github.com/laravel/framework/blob/5.1/src/Illuminate/Queue/QueueServiceProvider.php
  */
 class CustomQueueServiceProvider extends ServiceProvider
 {
+    /**
+     * Register the Config provider
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        // Publish the configuration file
+        $this->publishes([
+            __DIR__ . '../../config/custom-queue.php' => config_path('custom-queue.php'),
+        ], 'config');
+    }
+
     /**
      * Register the service provider.
      *
