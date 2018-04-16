@@ -16,7 +16,7 @@
             "Vnay92\\CustomQueue\\": "src/"
         },
         "psr-0": {
-            "Sentry\\SentryLaravel\\": "src/"
+            "Vnay92\\CustomQueue\\": "src/"
         }
     },
     "minimum-stability": "dev"
