@@ -45,8 +45,8 @@ class CustomQueueServiceProvider extends ServiceProvider
     {
         // Publish the configuration file
         $this->publishes([
-            __DIR__ . '../../config/custom-queue.php' => config_path('custom-queue.php'),
-        ], 'config');
+            __DIR__ . '/../../../config/custom-queue.php' => config_path('custom-queue.php'),
+        ]);
     }
 
     /**
