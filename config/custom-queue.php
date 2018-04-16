@@ -28,7 +28,10 @@ return [
     |
     */
 
+
     'connections' => [
+
+        // Default RabbitMQ Connection
         'rabbitmq' => [
             'driver'                => 'rabbitmq',
             'host'                  => env('RABBITMQ_HOST', 'localhost'),

@@ -45,6 +45,12 @@ class WorkCommand extends Command
     protected $description = 'Process the next job on a queue';
 
     /**
+     * The default Handler, if none is specified
+     * @var string
+     */
+    protected $defaultHandler = 'Vnay92\CustomQueue\Handlers\DefaultHandler';
+
+    /**
      * The queue worker instance.
      *
      * @var Vnay92\CustomQueue\Worker
@@ -86,7 +92,7 @@ class WorkCommand extends Command
 
         $connection = $this->argument('connection');
 
-        $handler = $this->option('handler');
+        $handler = $this->option('handler') ?: $this->defaultHandler;
 
         $response = $this->runWorker(
             $connection,
